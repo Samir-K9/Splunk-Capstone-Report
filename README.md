@@ -66,9 +66,9 @@ Next, Powershell was executed to run this malicious executable `python.exe` at e
 - Session logoff: 13:06:40 UTC
 
   ## Where
-  - User: Ryan.Adams
-  - Host: FRONTDESK-PC1
-  - Host IP: 172.16.0.110
+- User: Ryan.Adams
+- Host: FRONTDESK-PC1
+- Host IP: 172.16.0.110
  
   ## Why
   The clear motive of the attacker is unknown as the evidence only suggests persistance establishment.
@@ -76,3 +76,27 @@ Next, Powershell was executed to run this malicious executable `python.exe` at e
   However, it is clear that the attacker wants to stay on the system longer even after system reboots suggesting a strategic sytem access and not a one-time activity.
 
   The likely objectives could be to steal sensitive data gradually, lateral movement to other machines and even escalate privileges gradually.
+
+  ## How
+- Multiple logon attempts made by the attacker to initiate a breach.
+- Successful compromise of user account `Ryan.Adams`.
+- Windows Defender disabled and notifications turned off to avoid detection from security monitoring.
+- A malicious executable was downloaded from a HTTP request to `157.245.46.190` on port `9999`.
+- The payload was executed triggering a outbound TCP connection to `157.245.46.190` on port `8888`.
+- A scheduled task called `PythonUpdate` was created to launch `python.exe` at every system startup.
+- Attacker logged off from the session after establishing persistance.
+
+## Recommendations
+- Initiate a password reset for `Ryan.Adams` and enable multi factor authentication. Review for suspicious logins for other systems and users and enforce strict password policies.
+
+- Isolate `FRONTDESK-PC1` from the network to prevent any lateral movement to other machines. Terminate any suspicious process and remove any suspicious scheduled tasks and startup entries. Performing a fresh Windows intallation by fully formatting the disk can be safest way to remove any hidden malware and persistance mechanisms. However, backup important files first and scan them for malware.
+
+- Block the IP `157.245.46.190` from any inbound and outbound connections from the network.
+
+- Restrict administrative privileges to block any unauthorized changes to Defender's security settings. Any changes to Defender configuration settings should trigger an alert immediately at the SIEM.
+
+- Enhance IDS detection to alert any suspicious outbound connection and malicious software being downloaded by integrating anomaly/behaviour based rules.
+- 
+
+  
+
