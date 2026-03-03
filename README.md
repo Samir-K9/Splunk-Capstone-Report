@@ -96,7 +96,7 @@ Next, Powershell was executed to run this malicious executable `python.exe` at e
 - Restrict administrative privileges to block any unauthorized changes to Defender's security settings. Any changes to Defender configuration settings should trigger an alert immediately at the SIEM.
 
 - Enhance IDS detection to alert any suspicious outbound connection and malicious software being downloaded by integrating anomaly/behaviour based rules.
-- 
+- Launch an investigation into the host `DESKTOP-924H12` on IP `172.16.0.184` to determine how the attack originated from the internal host.
 
   
 
