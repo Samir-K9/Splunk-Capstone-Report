@@ -42,7 +42,6 @@ The account was logged off at 13:06:40 UTC.
 # Who, What, When, Where, Why, How
 ## Who
 - User: Ryan.Adams
-- Host: FRONTDESK-PC1
 - Host IP: 172.16.0.110
 - Attacker IP: 172.16.0.184
 
@@ -59,10 +58,17 @@ Next, Powershell was executed to run this malicious executable `python.exe` at e
 - Initial password attempts: 12:51:44 UTC
 - Successful compromise: 12:52:12 UTC
 - Defender disabled: 12:55:50 UTC
-- Defender notifications turned off: 12:56:28
+- Defender notifications turned off: 12:56:28 UTC
 - Malicious executable download: 12:59:26 UTC
 - Payload execution: 13:00:33 UTC
 - Outbound connection: 13:00:34 UTC
 - Powershell execution: 13:04:59
 - Session logoff: 13:06:40 UTC
-  
+
+  ## Where
+  - User: Ryan.Adams
+  - Host: FRONTDESK-PC1
+  - Host IP: 172.16.0.110
+ 
+  ## Why
+  The clear motive of the attacker is unknown as the evidence only suggests persistance establishment. However, it is clear that the attacker wants to stay on the system longer even after system reboots suggesting a strategic sytem access and not a one-time activity. The likely objectives could be to steal sensitive data gradually, lateral movement to other machines and even escalate privileges gradually.
