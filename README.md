@@ -47,7 +47,13 @@ The account was logged off at 13:06:40 UTC.
 - Attacker IP: 172.16.0.184
 
 ## What
-Initial attack started with Password Spraying attempts. After compromising the account of `Ryan.Adams`, Windows Defender was disabled and notifications were turned off. An executable called `python.exe` was downloaded and executed with the compromised session. This process initiated an outbound connection to an external IP which suggests a command-and-control connection. Next, Powershell was executed to run this malicious executable `python.exe` at every system startup to establish persistance.
+Initial attack started with Password Spraying attempts. 
+
+After compromising the account of `Ryan.Adams`, Windows Defender was disabled and notifications were turned off.
+
+An executable called `python.exe` was downloaded and executed with the compromised session. This process initiated an outbound connection to an external IP which suggests a command-and-control connection.
+
+Next, Powershell was executed to run this malicious executable `python.exe` at every system startup to establish persistance.
 
 ## When (2025/10/25)
 - Initial password attempts: 12:51:44 UTC
