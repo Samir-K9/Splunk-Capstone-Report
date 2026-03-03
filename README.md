@@ -71,4 +71,8 @@ Next, Powershell was executed to run this malicious executable `python.exe` at e
   - Host IP: 172.16.0.110
  
   ## Why
-  The clear motive of the attacker is unknown as the evidence only suggests persistance establishment. However, it is clear that the attacker wants to stay on the system longer even after system reboots suggesting a strategic sytem access and not a one-time activity. The likely objectives could be to steal sensitive data gradually, lateral movement to other machines and even escalate privileges gradually.
+  The clear motive of the attacker is unknown as the evidence only suggests persistance establishment.
+
+   However, it is clear that the attacker wants to stay on the system longer even after system reboots suggesting a strategic sytem access and not a one-time activity.
+
+   The likely objectives could be to steal sensitive data gradually, lateral movement to other machines and even escalate privileges gradually.
