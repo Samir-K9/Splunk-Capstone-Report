@@ -151,10 +151,13 @@ At 13:04:59 UTC, `schtasks.exe` was executed via PowerShell to create a schedule
 
 ![Image Alt](https://github.com/Samir-K9/Splunk-Capstone-Report/blob/d04a5d85744fc88f945f04dd8e67974b0b6e49cb/Screenshots/Screenshot%202026-03-04%20131853.png)
 
-## User-level Powershell Persistance
+## 9. User-level Powershell Persistance
 At 13:05:06, a Powershell process was executed to create `StartupProfileData-Interactive` in the user’s PowerShell folder. We can assume that it runs `python.exe` whenever Ryan.Adams opens PowerShell, ensuring the attacker can regain execution if the scheduled task is deleted or disabled. 
 
 ![Image Alt](https://github.com/Samir-K9/Splunk-Capstone-Report/blob/82cdea39869b874f86b8f5ae63b1eb00801bad2b/Screenshots/Screenshot%202026-03-04%20134225.png)
+
+## 10. Account Logged Off
+At 13:06:40
 
 
 
