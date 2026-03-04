@@ -118,7 +118,7 @@ Windows Defender Antivirus real-time protection scanning disabled at 12:55:50 UT
 
 ![Image Alt](https://github.com/Samir-K9/Splunk-Capstone-Report/blob/b8243890766ea392c0e33ba05ff8bb123ae55abb/Screenshots/Screenshot%202026-03-03%20162027.png)
 
-## 4. Malicious executable downloaded
+## 4. Malicious executable Downloaded
 At 12:55:55 UTC, Ryan.Adams launched Chrome from Windows Explorer.
 
 ![Image Alt](https://github.com/Samir-K9/Splunk-Capstone-Report/blob/625a4a26f15d09686afef50f20f15cad507f6e26/Screenshots/Screenshot%202026-03-03%20182439.png)
@@ -132,10 +132,23 @@ At 13:00:33 UTC, the malicious executable `python.exe` was launched from the use
 
 ![Image Alt](https://github.com/Samir-K9/Splunk-Capstone-Report/blob/c25b0de52763f80244172d06efe9a5c917c65666/Screenshots/Screenshot%202026-03-03%20185725.png)
 
-## 6. Outbound Communication Executed
-Immediately after execution, `python.exe` initiated outbound communication to an external C2 server on port 8888 and attempted internal RPC connections to `172.16.0.7`, indicating active command-and-control and possible lateral movement.
+## 6. Outbound Communication Initiated
+Immediately after execution, `python.exe` initiated outbound communication to an external C2 server on port 8888 at 13:00:34 UTC and attempted internal RPC connections to `172.16.0.7`on port`135` at 13:00:34 UTC and port `49669` at 13:00:35 UTC, indicating active command-and-control and possible lateral movement.
 
 ![Image Alt](https://github.com/Samir-K9/Splunk-Capstone-Report/blob/2b20e87755513543a54befb6b8fb1f7d7d9f7be3/Screenshots/Screenshot%202026-03-03%20190152.png)
+
+Log analysis identified only outbound network connection events from the compromised host to `172.16.0.7`, with no corresponding authentication or execution activity on the target system, indicating attempted but unsuccessful lateral movement.
+
+![Image Alt](https://github.com/Samir-K9/Splunk-Capstone-Report/blob/f2858ccde941f44a49ed53f8fe9a6cbdf27682d8/Screenshots/Screenshot%202026-03-04%20123651.png)
+
+## 7. Powershell Initiated
+Between 13:00:44 UTC and 13:04:08 UTC, powershell.exe was launched three times via Windows Explorer. Two of the launches included commands to change the working directory to C:\Users\Ryan.Adams\Music, while one was a standard PowerShell launch. All three events appear to be user-initiated activity.
+
+![Image Alt](https://github.com/Samir-K9/Splunk-Capstone-Report/blob/516d150f435ea3be938570f77fae02ebd1d2d7f0/Screenshots/Screenshot%202026-03-04%20130658.png)
+
+
+
+
 
 
   
