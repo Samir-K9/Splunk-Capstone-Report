@@ -109,7 +109,7 @@ A total of 157 login attempts made targetting various accounts.
 ![Image Alt](https://github.com/Samir-K9/Splunk-Capstone-Report/blob/0c923ad62357c249ae58c32d549c6f244f6feaba/Screenshots/Screenshot%202026-03-03%20155635.png)
 
 ## 2. Successful Login
-The user successfully authenticated using `ryan.adams` account at 12:52:12 UTC. No successful authentication recorded for other accounts. The logs indicate a network login from `DESKTOP-924H12` with IP `172.16.0.184`.
+The user successfully authenticated using `ryan.adams` account at 12:52:12 UTC. No successful authentication recorded for other accounts. The logs indicate a network login from `DESKTOP-924H12` with IP `172.16.0.184`. However, it is important to note that the primary active session started from the login at 12:55:17 UTC.
 
 ![Image Alt](https://github.com/Samir-K9/Splunk-Capstone-Report/blob/406bb011ee1a02dd4da7062548b799986905fa7d/Screenshots/Screenshot%202026-03-03%20161356.png)
 
@@ -157,7 +157,10 @@ At 13:05:06, a Powershell process was executed to create `StartupProfileData-Int
 ![Image Alt](https://github.com/Samir-K9/Splunk-Capstone-Report/blob/82cdea39869b874f86b8f5ae63b1eb00801bad2b/Screenshots/Screenshot%202026-03-04%20134225.png)
 
 ## 10. Account Logged Off
-At 13:06:40
+At 13:06:40, the session was ended after the attacker logged off from the machine. 
+
+![Image Alt](https://github.com/Samir-K9/Splunk-Capstone-Report/blob/113b710fd05a84915956304db44d72d9959605a7/Screenshots/Screenshot%202026-03-04%20143455.png)
+
 
 
 
