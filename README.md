@@ -146,6 +146,15 @@ Between 13:00:44 UTC and 13:04:08 UTC, powershell.exe was launched three times v
 
 ![Image Alt](https://github.com/Samir-K9/Splunk-Capstone-Report/blob/516d150f435ea3be938570f77fae02ebd1d2d7f0/Screenshots/Screenshot%202026-03-04%20130658.png)
 
+## 8. Persistance Achieved
+At 13:04:59 UTC, `schtasks.exe` was executed via PowerShell to create a scheduled task named `PythonUpdate` that runs `C:\Users\Ryan.Adams\Music\python.exe` at every system startup under the `SYSTEM` account. This represents persistence achieved by the attacker.
+
+![Image Alt](https://github.com/Samir-K9/Splunk-Capstone-Report/blob/d04a5d85744fc88f945f04dd8e67974b0b6e49cb/Screenshots/Screenshot%202026-03-04%20131853.png)
+
+## User-level Powershell Persistance
+At 13:05:06, a Powershell process was executed to create `StartupProfileData-Interactive` in the user’s PowerShell folder. We can assume that it runs `python.exe` whenever Ryan.Adams opens PowerShell, ensuring the attacker can regain execution if the scheduled task is deleted or disabled. 
+
+![Image Alt](https://github.com/Samir-K9/Splunk-Capstone-Report/blob/82cdea39869b874f86b8f5ae63b1eb00801bad2b/Screenshots/Screenshot%202026-03-04%20134225.png)
 
 
 
