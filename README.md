@@ -129,7 +129,9 @@ At 12:57:00 UTC, the Chrome process `chrome.exe` created the file `python.exe` i
 At 13:00:33 UTC, the malicious executable `python.exe` was launched from the user’s Music directory via Windows Explorer, confirming successful execution of the payload.
 ![Image Alt](https://github.com/Samir-K9/Splunk-Capstone-Report/blob/c25b0de52763f80244172d06efe9a5c917c65666/Screenshots/Screenshot%202026-03-03%20185725.png)
 
-
+## 6. Outbound Communication Executed
+Immediately after execution, `python.exe` initiated outbound communication to an external C2 server on port 8888 and attempted internal RPC connections to `172.16.0.7`, indicating active command-and-control and possible lateral movement.
+![Image Alt](https://github.com/Samir-K9/Splunk-Capstone-Report/blob/2b20e87755513543a54befb6b8fb1f7d7d9f7be3/Screenshots/Screenshot%202026-03-03%20190152.png)
 
 
   
