@@ -29,7 +29,7 @@ Upon further investigation, it was identified that no other accounts have been c
 
 After gaining access, the next move from the attacker was disabling Windows Defender antivirus and turning off Windows Defender nottifications.
 
-An executable called `python.exe` was downloaded and was saved to the directory `C:\Users\Ryan.Adams\Music\python.exe`. 
+An executable called `python.exe` was downloaded and was saved to the directory `C:\Users\Ryan.Adams\Music\`. 
 
 This file was then executed which initiated an outbound TCP connection to `157.245.46.190:8888` which suggests a connection to a Command-and-Control (C2) connection.
 
