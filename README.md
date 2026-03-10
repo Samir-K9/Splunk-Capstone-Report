@@ -42,7 +42,7 @@ The account was logged off at 13:06:40 UTC.
 # Who, What, When, Where, Why, How
 ## Who
 - User: Ryan.Adams
-- 
+
 ## What
 Initial attack started with Password Spraying attempts. 
 
