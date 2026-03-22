@@ -78,7 +78,7 @@ Next, Powershell was executed to run this malicious executable `python.exe` at e
 - Multiple logon attempts made by the attacker to initiate a breach.
 - Successful compromise of user account `Ryan.Adams`.
 - Windows Defender disabled and notifications turned off to avoid detection from security monitoring.
-- A malicious executable was downloaded from a HTTP request to `157.245.46.190` on port `9999`.
+- A malicious executable called `python.exe` was downloaded.
 - The payload was executed triggering a outbound TCP connection to `157.245.46.190` on port `8888`.
 - A scheduled task called `PythonUpdate` was created to launch `python.exe` at every system startup.
 - A Powershell process was executed to create `StartupProfileData-Interactive` in the user’s PowerShell folder.
